@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trello</title>
+    <!--css-->
+    <link rel="stylesheet" href="style.css">
+    <!--axios-->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="container">
+
+        <div class="trabajo-head">
+            <strong class="trabajo-head-title">Espacio de trabajo</strong>
+        </div>
+        
+        <div class="trabajo-table">
+            <div class="trabajo-block" id="to-do" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <strong>to do</strong>
+            </div>
+
+            <div class="trabajo-block" id="doing" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <strong>doing</strong>
+            </div>
+
+            <div class="trabajo-block" id="done" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <strong>done</strong>
+            </div>
+        </div>
+
+        <div class="trabajo-block trabajo-form">
+            <strong class="trabajo-form-title">Tarea</strong>
+
+            <div class="container-inputs">
+                <strong class="strong-input">Titulo Tarea:</strong>
+                <input type="text" id="tarea-titulo" class="input-text">
+
+                <strong class="strong-input">Descripción Tarea:</strong>
+                <textarea id="tarea-descripcion" class="textarea-text" rows="4"></textarea>
+
+                <strong class="strong-input">Fecha Tarea:</strong>
+                <input type="date" id="tarea-fecha" class="input-date">
+
+
+
+                <label for="opciones">Elige una opción:</label>
+                <select id="opciones" name="opciones">
+                    <option value="opcion1">to do</option>
+                    <option value="opcion2">doing</option>
+                    <option value="opcion3">done</option>
+                </select>
+
+            </div>
+
+            <input class="btn-crear" id="btn-crear-editar" type="submit" value="Crear Tarea" onclick="crearTarea(event)"/>
+        </div>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
